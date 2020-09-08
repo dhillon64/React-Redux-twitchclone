@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { signIn, signOut } from "../actions";
+import history from "../history";
 
 class GoogleAuth extends React.Component {
   componentDidMount() {
@@ -9,7 +10,7 @@ class GoogleAuth extends React.Component {
         .init({
           clientId:
             "363098796799-mro78baispi4jm7f5n5u28ujd8h9ap9m.apps.googleusercontent.com",
-          scope: "email",
+          scope: "profile",
         })
         .then(() => {
           this.auth = window.gapi.auth2.getAuthInstance();
