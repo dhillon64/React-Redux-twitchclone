@@ -65,6 +65,7 @@ export const deleteStream = (id) => {
       type: DELETE_STREAM,
       payload: id,
     });
+    history.push("/");
   };
 };
 
