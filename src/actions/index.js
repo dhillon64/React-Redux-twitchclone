@@ -11,6 +11,13 @@ import streams from "../apis/streams";
 import history from "../history";
 import { formValues } from "redux-form";
 
+export const filterStreams = (text) => {
+  return {
+    type: "FILTER_STREAMS",
+    payload: text,
+  };
+};
+
 export const createStream = (formValues) => {
   return async (dispatch, getState) => {
     const { userId } = getState().auth;
