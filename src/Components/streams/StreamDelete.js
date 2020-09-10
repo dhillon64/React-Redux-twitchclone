@@ -19,7 +19,7 @@ class StreamDelete extends React.Component {
         >
           Delete
         </button>
-        <Link to="/" className="ui button">
+        <Link to="/streams/list" className="ui button">
           Cancel
         </Link>
       </React.Fragment>
@@ -40,7 +40,7 @@ class StreamDelete extends React.Component {
         title="Delete Stream"
         content={this.renderContent()}
         actions={this.renderActions()}
-        onDismiss={() => history.push("/")}
+        onDismiss={() => history.push("/streams/list")}
       />
     );
   }

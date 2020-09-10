@@ -26,7 +26,7 @@ export const createStream = (formValues) => {
       type: CREATE_STREAM,
       payload: response.data,
     });
-    history.push("/");
+    history.push("/streams/list");
   };
 };
 
@@ -60,7 +60,7 @@ export const editStream = (id, formValues) => {
       type: EDIT_STREAM,
       payload: response.data,
     });
-    history.push("/");
+    history.push("/streams/list");
   };
 };
 
@@ -72,7 +72,7 @@ export const deleteStream = (id) => {
       type: DELETE_STREAM,
       payload: id,
     });
-    history.push("/");
+    history.push("/streams/list");
   };
 };
 
